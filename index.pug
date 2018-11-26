@@ -13,11 +13,11 @@ html(lang="pt-br")
                 img(src="res/ortho.svg")
                 menu.row.align-items-md-center
                     div
-                        nav Home
-                        nav Serviços
-                        nav Sobre nós
-                        nav Equipe
-                        nav Fale Conosco
+                        nav(section="header") Home
+                        nav(section="servicos") Serviços
+                        nav(section="sobre") Sobre nós
+                        nav(section="equipe") Equipe
+                        nav(section="footer") Fale Conosco
             div.text
                 p OrthoDesign
                 p Odontologia Contemporânea
@@ -29,19 +29,19 @@ html(lang="pt-br")
                     h3 Serviços
                     span Conheça nossos serviços personalizados para você
                 div.row
-                    div.col
+                    div.col.col-md-5
                         h5 Prótese Dentária
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col
+                    div.col.col-md-5
                         h5 Cirurgia
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col
+                    div.col.col-md-5
                         h5 Ortodontia
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col
+                    div.col.col-md-5
                         h5 Odontopediatria
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
@@ -64,25 +64,25 @@ html(lang="pt-br")
                 h3 Nossa Equipe
                 span Conheça nossa equipe
                 div.row
-                    div.col.doutor
+                    div.col.col-md-5.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.doutor
+                    div.col.col-md-5.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.doutor
+                    div.col.col-md-5.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.doutor
+                    div.col.col-md-5.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
@@ -94,23 +94,23 @@ html(lang="pt-br")
                     div.col-md-3
                         label Nosso Endereço
                         div
-                            img(src="res/location.png")
+                            img(src="res/icones/ic_location.svg")
                             span R .Santa Adélia, 179 - lojas 4 e 5 <br/>Centro, Eusébio
 
                     div.col-md-3
                         label Contato
                         div
-                            img(src="res/letter.png")
-                            span atendimento@orthodesign.com.br
+                            img(src="res/icones/ic_email.svg")
+                            span <a href="mailto:atendimento@orthodesign.com.br">atendimento@orthodesign.com.br</a>
                         div
-                            img(src="res/letter.png")
+                            img(src="res/icones/ic_wpp.svg")
                             span (85) 98195-0931
                         div
-                            img(src="res/instagram.png")
+                            img(src="res/icones/ic_instagram.svg")
                             span
                                 a(href="instagram.com/orthodesign") @orthodesign
                         div
-                            img(src="res/facebook.png")
+                            img(src="res/icones/ic_facebook.svg")
                             span
                                 a(href="facebook.com/orthodesign") /orthodesign
 

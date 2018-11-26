@@ -1,0 +1,26 @@
+@media screen and (min-width: 1200px) {
+  header {
+    height: 970px;
+    -webkit-background-size: contain;
+    background-size: contain;
+  }
+
+  .col {
+    flex: 1 0 0 !important;
+  }
+
+  section {
+    &.equipe {
+      div {
+        margin: 0;
+      }
+    }
+
+    &.sobre {
+      div.col-md-4 img {
+        width: 100%;
+      }
+    }
+
+  }
+}

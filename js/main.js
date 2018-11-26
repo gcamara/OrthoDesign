@@ -23,4 +23,15 @@
 
         });
     }
+
+    $('nav').click(function(event) {
+        var section = $(this).attr('section')
+        var el = $('section.'+section)
+        if (!el.length)
+            el = $(section)
+
+        $('html, body').animate({
+            scrollTop: el.offset().top - 100
+        }, 1000)
+    })
 })()
