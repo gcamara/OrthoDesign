@@ -38,9 +38,14 @@ button:hover {
     opacity: 1;
   }
 }
+div.info-contato {
+  width: 100%;
+  background: rgba(246, 246, 246, 0.5);
+  min-height: 30px;
+}
+
 header {
   height: 970px;
-  position: relative;
   background-image: url("../res/header.png");
   background-repeat: no-repeat;
   -webkit-background-size: contain;
@@ -108,46 +113,33 @@ header .arrow.kick {
 }
 header div.cabecalho {
   transition: background .3s ease-in;
-}
-header div.cabecalho.fix {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: #f6f6f6;
-  height: 80px;
-  z-index: 999;
-  box-shadow: 0 -5px 15px #444444;
-}
-header div.cabecalho.fix menu nav:hover::before {
-  background: #d6a193;
+  display: flex;
+  flex-direction: column;
 }
 header div.cabecalho img {
-  display: inline;
   padding: 5px;
   width: 80px;
   height: 80px;
-  position: absolute;
-  left: 0;
-  top: 0;
+  display: inline-block;
 }
-header div.cabecalho menu {
-  height: 80px;
+header menu {
+  display: inline-block;
+  margin-left: auto !important;
 }
-header div.cabecalho menu div {
-  width: 34%;
+header menu div {
+  width: 100%;
   margin-left: auto;
   order: 2;
   color: #444;
 }
-header div.cabecalho menu div nav {
+header menu div nav {
   font-weight: 400;
   display: inline;
   margin: 5px;
   padding: 10px;
-  position: relative;
   text-align: center;
 }
-header div.cabecalho menu div nav::before {
+header menu div nav::before {
   width: 0px;
   position: absolute;
   bottom: 0;
@@ -156,10 +148,10 @@ header div.cabecalho menu div nav::before {
   content: '';
   transition: width .3s ease-in-out;
 }
-header div.cabecalho menu div nav:hover {
+header menu div nav:hover {
   cursor: pointer;
 }
-header div.cabecalho menu div nav:hover::before {
+header menu div nav:hover::before {
   content: '';
   width: 100%;
   height: 3px;
@@ -175,7 +167,7 @@ section.servicos, section.equipe {
 section {
   margin-top: -30px !important;
   opacity: 0;
-  min-height: 500px;
+  min-height: 300px;
   transition: margin-top .7s ease-in, opacity .5s ease-in;
 }
 section figure {
@@ -237,16 +229,12 @@ footer {
   min-height: 400px;
   background-color: #EB4C4C;
   color: white;
-  padding: 40px;
   position: relative;
-  font-size: 1.1em;
 }
 footer .col-md-3 div {
   margin-bottom: 10px;
 }
 footer img {
-  width: 22px;
-  height: 22px;
   margin-right: 5px;
   margin-bottom: 5px;
 }
@@ -260,13 +248,10 @@ footer .footer-sticker {
   width: 100%;
   text-align: center;
   line-height: 40px;
-  margin-left: -50px !important;
+  margin-left: -40px !important;
 }
 footer .footer-sticker label {
   font-size: 12pt !important;
-}
-footer [class^="col"] > label {
-  font-size: 17pt;
 }
 footer input, footer textarea {
   display: block;
@@ -302,13 +287,109 @@ footer .fale-conosco .info .col-md-6 {
   padding-left: 0;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    position: relative;
+  }
+
   header {
     height: 440px;
     background-size: 100% 100%;
   }
-  header p, header .cabecalho img, header .arrow {
+  header button.trigger-menu {
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.5);
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    margin: 5px;
+  }
+  header p, header .arrow {
     display: none !important;
+  }
+  header div.cabecalho {
+    transition: background .3s ease-in;
+    height: 100%;
+    margin: auto;
+  }
+  header div.cabecalho.fix {
+    position: relative;
+  }
+  header div.cabecalho img {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+  header div.cabecalho .menu {
+    display: flex;
+  }
+  header menu {
+    transition: left .5s ease-in;
+    position: fixed;
+    overflow: hidden;
+    left: -150px;
+    top: -20px;
+    height: calc(100vh + 20px);
+    padding: 0px;
+    z-index: 9999;
+    box-shadow: 6px 0 20px -10px black;
+  }
+  header menu.show {
+    left: 0;
+  }
+  header menu div nav {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    height: 20%;
+    color: white;
+    text-align: center;
+    font-size: 8pt;
+    overflow: hidden;
+  }
+  header menu div nav[section="header"] {
+    background-color: #D6A193;
+  }
+  header menu div nav[section="servicos"] {
+    background-color: #E9A897;
+  }
+  header menu div nav[section="sobre"] {
+    background-color: #F2AF9D;
+  }
+  header menu div nav[section="equipe"] {
+    background-color: #FFB9A6;
+  }
+  header menu div nav[section="footer"] {
+    background-color: #FEA68F;
+  }
+  header .ic {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 12px auto 2px auto;
+  }
+  header .ic.ic-home {
+    background: url("../res/icones/ic_home.svg") no-repeat center;
+  }
+  header .ic.ic-servicos {
+    background: url("../res/icones/ic_dente.svg") no-repeat center;
+  }
+  header .ic.ic-sobre {
+    background: url("../res/icones/ic_sobre.svg") no-repeat center;
+  }
+  header .ic.ic-equipe {
+    background: url("../res/icones/ic_equipe.svg") no-repeat center;
+  }
+  header .ic.ic-fale-conosco {
+    background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
   }
 
   section.sobre div.col-md-4 img {
@@ -316,6 +397,30 @@ footer .fale-conosco .info .col-md-6 {
   }
   section.equipe div {
     margin: 10px 25px;
+  }
+  section.show {
+    margin-top: 30px !important;
+  }
+
+  footer {
+    font-size: 8pt;
+    padding: 30px;
+  }
+  footer img {
+    width: 15px;
+    height: 15px;
+  }
+  footer [class^="col"] > label {
+    font-size: 12pt;
+  }
+  footer .row div[class^="col-"]:not(:first-child) {
+    margin-top: 30px;
+  }
+  footer .fale-conosco {
+    margin-bottom: 35px;
+  }
+  footer .footer-sticker {
+    width: calc(100% + 10px);
   }
 }
 @media screen and (min-width: 1024px) {
@@ -328,12 +433,69 @@ footer .fale-conosco .info .col-md-6 {
   section.sobre div.col-md-4 img {
     width: 170%;
   }
+
+  footer .row div[class^="col-"]:not(:first-child) {
+    margin-top: 0;
+  }
 }
 @media screen and (min-width: 1200px) {
   header {
-    height: 970px;
+    height: 870px;
     -webkit-background-size: contain;
     background-size: contain;
+  }
+  header p, header .cabecalho img, header .arrow {
+    display: initial !important;
+  }
+  header button.trigger-menu {
+    display: none;
+  }
+  header div.cabecalho.fix {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #f6f6f6;
+    height: 117px;
+    z-index: 999;
+    box-shadow: 0 -5px 15px #444444;
+  }
+  header div.cabecalho.fix menu nav:hover::before {
+    background: #d6a193;
+  }
+  header div.cabecalho.fix div.info-contato {
+    background: rgba(231, 231, 231, 0.5);
+  }
+  header div.cabecalho .menu {
+    display: flex;
+    align-items: center;
+  }
+  header div.cabecalho .menu div nav {
+    position: relative;
+  }
+  header div.cabecalho div.contato {
+    font-size: 9pt;
+    font-family: sans-serif;
+    font-weight: 600;
+    display: inline-block;
+    line-height: 30px;
+  }
+  header div.cabecalho div.contato img {
+    width: 30px;
+    height: 30px;
+  }
+  header div.cabecalho .btn-consulta {
+    float: right;
+    margin-right: 10px;
+    border-radius: 0;
+    border: none;
+    background: #d6a193;
+    color: white;
+    font-size: 9pt;
+    font-family: sans-serif;
+    outline: none;
+  }
+  header div.cabecalho .btn-consulta:hover {
+    background: #e1bbb1;
   }
 
   .col {
@@ -345,6 +507,18 @@ footer .fale-conosco .info .col-md-6 {
   }
   section.sobre div.col-md-4 img {
     width: 100%;
+  }
+
+  footer {
+    padding: 40px;
+    font-size: 1.1em;
+  }
+  footer [class^="col"] > label {
+    font-size: 17pt;
+  }
+  footer img {
+    width: 22px;
+    height: 22px;
   }
 }
 

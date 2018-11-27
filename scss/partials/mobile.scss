@@ -1,10 +1,121 @@
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  body {
+    position: relative;
+  }
+
   header {
     height: 440px;
     background-size: 100% 100%;
 
-    p, .cabecalho img, .arrow {
+    button.trigger-menu {
+      border: none;
+      outline: none;
+      background: rgba(255,255,255, .5);
+      display: block;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      padding: 10px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      margin: 5px;
+
+    }
+
+    p, .arrow {
       display: none !important;
+    }
+
+    div.cabecalho {
+      transition: background .3s ease-in;
+      height: 100%;
+      margin: auto;
+
+      &.fix {
+        position: relative;
+      }
+
+      img {
+        width: 250px;
+        height: 250px;
+        margin: auto;
+      }
+
+      .menu {
+        display: flex;
+      }
+
+    }
+
+    menu {
+      transition: left .5s ease-in;
+      position: fixed;
+      overflow: hidden;
+      left: -150px;
+      top: -20px;
+      height: calc(100vh + 20px);
+      padding: 0px;
+      z-index: 9999;
+      box-shadow: 6px 0 20px -10px black;
+
+      &.show {
+        left: 0;
+      }
+
+      div {
+        nav {
+          display: block;
+          text-align: center;
+          margin: 0;
+          padding: 5px;
+          height: 20%;
+          color: white;
+          text-align: center;
+          font-size: 8pt;
+          overflow: hidden;
+
+          &[section="header"] {
+            background-color: #D6A193;
+          }
+          &[section="servicos"] {
+            background-color: #E9A897;
+          }
+          &[section="sobre"] {
+            background-color: #F2AF9D;
+          }
+          &[section="equipe"] {
+            background-color: #FFB9A6;
+          }
+          &[section="footer"] {
+            background-color: #FEA68F;
+          }
+        }
+      }
+    }
+
+    .ic {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: 12px auto 2px auto;
+
+      &.ic-home {
+         background: url("../res/icones/ic_home.svg") no-repeat center;
+      }
+      &.ic-servicos {
+         background: url("../res/icones/ic_dente.svg") no-repeat center;
+      }
+      &.ic-sobre {
+         background: url("../res/icones/ic_sobre.svg") no-repeat center;
+      }
+      &.ic-equipe {
+         background: url("../res/icones/ic_equipe.svg") no-repeat center;
+      }
+      &.ic-fale-conosco {
+         background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
+      }
     }
 
   }
@@ -22,6 +133,35 @@
       }
     }
 
+    &.show {
+      margin-top: 30px !important;
+    }
+  }
+
+  footer {
+    font-size: 8pt;
+    padding: 30px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
+    [class^="col"] > label {
+      font-size: 12pt;
+    }
+
+    .row div[class^="col-"]:not(:first-child) {
+      margin-top: 30px;
+    }
+
+    .fale-conosco {
+      margin-bottom: 35px;
+    }
+
+    .footer-sticker {
+      width: calc(100% + 10px);
+    }
   }
 }
 
@@ -40,7 +180,11 @@
         width: 170%;
       }
     }
-
   }
 
+  footer {
+    .row div[class^="col-"]:not(:first-child) {
+      margin-top: 0;
+    }
+  }
 }

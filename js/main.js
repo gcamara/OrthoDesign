@@ -34,4 +34,12 @@
             scrollTop: el.offset().top - 100
         }, 1000)
     })
+
+    $(window).click(event => {
+        var target = $(event.target)
+        var menu = $('menu')
+        if (target[0] != $('button.trigger-menu')[0] && (target != menu || !target.parent('menu').length)) {
+            menu.removeClass('show')
+        }
+    })
 })()
