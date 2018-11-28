@@ -10,6 +10,8 @@ html(lang="pt-br")
     body
         header
             button.trigger-menu(onclick="$('menu').toggleClass('show')")
+                each val in [1, 2, 3]
+                    div.dash
             div.cabecalho
                 div.info-contato
                     div.contato
