@@ -23,4 +23,23 @@
 
         });
     }
+
+    $('nav').click(function(event) {
+        var section = $(this).attr('section')
+        var el = $('section.'+section)
+        if (!el.length)
+            el = $(section)
+
+        $('html, body').animate({
+            scrollTop: el.offset().top - 100
+        }, 1000)
+    })
+
+    $(window).click(event => {
+        var target = $(event.target)
+        var menu = $('menu')
+        if (target[0] != $('button.trigger-menu')[0] && (target != menu || !target.parent('menu').length)) {
+            menu.removeClass('show')
+        }
+    })
 })()
