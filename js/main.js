@@ -24,7 +24,7 @@
         });
     }
 
-    $('nav').click(function(event) {
+    $('nav, nav *').click(function(event) {
         var section = $(this).attr('section')
         var el = $('section.'+section)
         if (!el.length)
