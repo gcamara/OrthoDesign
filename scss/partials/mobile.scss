@@ -90,7 +90,7 @@
     button.trigger-menu {
       border: none;
       outline: none;
-      background: rgba(130, 51, 163, 0.5);
+      background-color: rgba(130, 51, 163, 0.5);
       display: block;
       position: fixed;
       z-index: 999;
@@ -101,6 +101,12 @@
       height: 50px;
       border-radius: 0;
       margin: 5px;
+      background-image: url('../res/icones/menu_hamb.png');
+      background-repeat: no-repeat;
+      background-size: 60%;
+      background-position: 50%;
+      filter: brightness(1);
+
 
       .dash {
         width: 80%;
@@ -172,6 +178,7 @@
       padding: 0px;
       z-index: 9999;
       box-shadow: 6px 0 20px -10px black;
+      background: #FEA68F;
 
       &.show {
         left: 0;
@@ -183,7 +190,6 @@
           text-align: center;
           margin: 0;
           padding: 5px;
-          height: 20%;
           color: white;
           text-align: center;
           font-size: 8pt;
