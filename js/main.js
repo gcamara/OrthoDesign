@@ -9,19 +9,19 @@
             menu.classList.remove('fix')
 
         $('.arrow').removeClass('kick')
-
-        $('section').each(function (i) {
-
-            var bottom_of_object = $(this).position().top + $(this).outerHeight();
-            var bottom_of_window = $(window).scrollTop() + $(window).height();
-
-            /* If the object is completely visible in the window, fade it it */
-            if (bottom_of_window + 300 > bottom_of_object) {
-
-                $(this).addClass('show')
-            }
-
-        });
+        //
+        // $('section').each(function (i) {
+        //
+        //     var bottom_of_object = $(this).position().top + $(this).outerHeight();
+        //     var bottom_of_window = $(window).scrollTop() + $(window).height();
+        //
+        //     /* If the object is completely visible in the window, fade it it */
+        //     if (bottom_of_window + 300 > bottom_of_object) {
+        //
+        //         $(this).addClass('show')
+        //     }
+        //
+        // });
     }
 
     $('nav, nav *').click(function(event) {
