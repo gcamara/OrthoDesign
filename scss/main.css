@@ -29,6 +29,12 @@ button:hover {
   background-color: white;
 }
 
+header nav a, header nav a:hover, header nav a:visited, header nav a:active {
+  color: #444;
+  outline: none;
+  text-decoration: none;
+}
+
 @keyframes kick-arrow {
   to {
     bottom: 200px;
@@ -364,6 +370,9 @@ footer .fale-conosco .info .col-md-6 {
   header {
     background-size: 100% 100%;
   }
+  header nav a, header nav a:hover, header nav a:visited, header nav a:active {
+    color: white;
+  }
   header .text {
     display: none;
   }
@@ -496,7 +505,7 @@ footer .fale-conosco .info .col-md-6 {
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1025px) {
   header {
     height: 970px;
   }

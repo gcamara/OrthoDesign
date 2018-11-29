@@ -81,6 +81,9 @@
 
 @media screen and (min-width: 320px) and (max-width: 1026px){
   header {
+    nav a, nav a:hover, nav a:visited, nav a:active {
+      color: white;
+    }
     background-size: 100% 100%;
 
     .text {

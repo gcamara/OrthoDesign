@@ -24,7 +24,7 @@
         // });
     }
 
-    $('nav, nav *').click(function(event) {
+    $('nav a, nav .ic').click(function(event) {
         var self = $(this)
         if ($(this).parent('nav').length)
             self = $(this).parent('nav')
