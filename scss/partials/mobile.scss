@@ -4,8 +4,88 @@
   }
 
   header {
-    height: 440px;
     background-size: 100% 100%;
+    height: 80%;
+  }
+
+  section {
+    &.sobre {
+      div.col-md-4 img {
+        width: 260%;
+      }
+    }
+
+    &.servicos {
+      div {
+        margin: 10px 25px;
+      }
+    }
+
+    &.equipe {
+      div {
+        margin: 10px 25px;
+      }
+    }
+
+    &.show {
+      margin-top: 30px !important;
+    }
+  }
+
+  footer {
+    font-size: 8pt;
+    padding: 30px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+
+    [class^="col"] > label {
+      font-size: 12pt;
+    }
+
+    .fale-conosco {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    &.show {
+      margin-top: 100px !important;
+    }
+
+    &.servicos {
+      opacity: 1 !important;
+    }
+
+    &.sobre {
+      div.col-md-4 img {
+        width: 170%;
+      }
+    }
+  }
+
+  footer {
+    .row div[class^="col-"]:not(:first-child) {
+      margin-top: 0;
+    }
+    .horario-funcionamento {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 1026px){
+  header {
+    background-size: 100% 100%;
+
+    .text {
+      display: none;
+    }
 
     button.trigger-menu {
       border: none;
@@ -33,7 +113,29 @@
           margin: 10px auto;
         }
       }
+    }
 
+    .ic {
+      width: 40px;
+      height: 40px;
+      display: block;
+      margin: 20% auto 2px auto;
+
+      &.ic-home {
+        background: url("../res/icones/ic_home.svg") no-repeat center;
+      }
+      &.ic-servicos {
+        background: url("../res/icones/ic_dente.svg") no-repeat center;
+      }
+      &.ic-sobre {
+        background: url("../res/icones/ic_sobre.svg") no-repeat center;
+      }
+      &.ic-equipe {
+        background: url("../res/icones/ic_equipe.svg") no-repeat center;
+      }
+      &.ic-fale-conosco {
+        background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
+      }
     }
 
     p, .arrow {
@@ -60,7 +162,6 @@
       }
 
     }
-
     menu {
       transition: left .5s ease-in;
       position: fixed;
@@ -111,42 +212,16 @@
         }
       }
     }
-
-    .ic {
-      width: 40px;
-      height: 40px;
-      display: block;
-      margin: 50% auto 2px auto;
-
-      &.ic-home {
-         background: url("../res/icones/ic_home.svg") no-repeat center;
-      }
-      &.ic-servicos {
-         background: url("../res/icones/ic_dente.svg") no-repeat center;
-      }
-      &.ic-sobre {
-         background: url("../res/icones/ic_sobre.svg") no-repeat center;
-      }
-      &.ic-equipe {
-         background: url("../res/icones/ic_equipe.svg") no-repeat center;
-      }
-      &.ic-fale-conosco {
-         background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
-      }
-    }
-
   }
 
   section {
-    &.sobre {
-      div.col-md-4 img {
-        width: 260%;
-      }
-    }
+   &.servicos div {
+      margin-top: 10px;
+   }
 
-    &.equipe {
-      div {
-        margin: 10px 25px;
+    &.sobre {
+      h3 {
+        text-align: center;
       }
     }
 
@@ -156,52 +231,9 @@
   }
 
   footer {
-    font-size: 8pt;
-    padding: 30px;
-
-    img {
-      width: 15px;
-      height: 15px;
-    }
-
-    [class^="col"] > label {
-      font-size: 12pt;
-    }
-
-    .row div[class^="col-"]:not(:first-child) {
-      margin-top: 30px;
-    }
-
-    .fale-conosco {
-      margin-bottom: 35px;
-    }
-
-    .footer-sticker {
-      width: calc(100% + 10px);
-    }
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  section {
-    &.show {
-      margin-top: 100px !important;
-    }
-
-    &.servicos {
-      opacity: 1 !important;
-    }
-
-    &.sobre {
-      div.col-md-4 img {
-        width: 170%;
-      }
+    .horario-funcionamento {
+      margin-bottom: 20px;
     }
   }
 
-  footer {
-    .row div[class^="col-"]:not(:first-child) {
-      margin-top: 0;
-    }
-  }
 }

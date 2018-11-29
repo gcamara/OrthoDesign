@@ -1,8 +1,6 @@
 @media screen and (min-width: 1200px) {
   header {
-    height: 870px;
-    -webkit-background-size: contain;
-    background-size: contain;
+    height: 100%;
 
     p, .cabecalho img, .arrow {
       display: initial !important;
@@ -90,20 +88,11 @@
         width: 100%;
       }
     }
-  }
 
-  footer {
-    padding: 40px;
-    font-size: 1.1em;
-
-    [class^="col"] > label {
-      font-size: 17pt;
+    &.servicos {
+      div {
+        margin: 10px 25px;
+      }
     }
-
-    img {
-      width: 22px;
-      height: 22px;
-    }
-
   }
 }
