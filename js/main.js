@@ -14,7 +14,7 @@
         if ($(this).parent('nav').length)
             self = $(this).parent('nav')
 
-        var section = self.attr('section')
+        var section = self.attr('data-section')
         var el = $('section.'+section)
         if (!el.length)
             el = $(section)
