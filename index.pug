@@ -8,20 +8,25 @@ html(lang="pt-br")
     meta(property="og:site_name" content="OrthoDesign")
     meta(property="og:title" content="Odontologia Contemporânea")
     meta(property="og:description" content="Tratamentos Odontológicos em Eusébio/CE. Venha")
-    meta(property="og:image" itemprop="image" content="http://www.orthodesign.com.br/res/ortho_300.png")
+    meta(property="og:image" content="http://www.orthodesign.com.br/res/ortho_300.png")
+    meta(property="og:image:type" content="image/jpeg")
+    meta(property="og:image:width" content="300")
+    meta(property="og:image:height" content="316")
     meta(property="og:url" content="http://www.orthodesign.com.br/")
     meta(property="og:type" content="website")
-    meta(property="og:locale" content="pt_BR")
+    meta(name="keywords" content="orthodesign, ortho, odontologia, eusebio, ceara, protese, dentaria, protese dentaria, cirurgia")
+    meta(name="robots" content="index, follow")
     title OrthoDesign - Odontologia Contemporânea
-    link(href="scss/bootstrap.min.css", rel="stylesheet")
-    link(rel="stylesheet" href="scss/main.css")
-    script(src="js/jquery-3.3.1.min.js")
-    link(rel="apple-touch-icon" sizes="180x180" href="res/icones/apple-touch-icon.png")
-    link(rel="icon" type="image/png" sizes="32x32" href="res/icones/favicon-32x32.png")
-    link(rel="icon" type="image/png" sizes="16x16" href="res/icones/favicon-16x16.png")
-    link(rel="mask-icon" href="res/icones/safari-pinned-tab.svg" color="#5bbad5")
 
     body
+        link(href="scss/bootstrap.min.css", rel="stylesheet")
+        link(rel="stylesheet" href="scss/main.css")
+        script(src="js/jquery-3.3.1.min.js")
+        link(rel="apple-touch-icon" sizes="180x180" href="res/icones/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="res/icones/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="res/icones/favicon-16x16.png")
+        link(rel="mask-icon" href="res/icones/safari-pinned-tab.svg" color="#5bbad5")
+
         header
             button.trigger-menu(onclick="$('menu').toggleClass('show')")
             div.cabecalho
@@ -44,7 +49,6 @@ html(lang="pt-br")
                 p OrthoDesign
                 p Odontologia Contemporânea
 
-            div.arrow.kick
         main.container-fluid
             section.show.servicos
                 div
