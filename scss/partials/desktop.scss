@@ -1,8 +1,6 @@
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1025px) {
   header {
-    height: 870px;
-    -webkit-background-size: contain;
-    background-size: contain;
+    height: 970px;
 
     p, .cabecalho img, .arrow {
       display: initial !important;
@@ -18,7 +16,7 @@
         top: 0;
         width: 100%;
         background: $bgElements;
-        height: 117px;
+        //height: 117px;
         z-index: 999;
         box-shadow: 0 -5px 15px #444444 ;
 
@@ -87,23 +85,14 @@
 
     &.sobre {
       div.col-md-4 img {
-        width: 100%;
+        width: 130%;
       }
     }
-  }
 
-  footer {
-    padding: 40px;
-    font-size: 1.1em;
-
-    [class^="col"] > label {
-      font-size: 17pt;
+    &.servicos {
+      div {
+        margin: 10px 25px;
+      }
     }
-
-    img {
-      width: 22px;
-      height: 22px;
-    }
-
   }
 }

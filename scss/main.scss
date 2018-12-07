@@ -2,13 +2,11 @@ $bTop-color: #d6a193;
 $bgElements: #f6f6f6;
 $btnColor: #EB4C4C;
 
+@import url('https://fonts.googleapis.com/css?family=Text+Me+One');
+
 body {
   font-family: sans-serif, Arial;
   color: #444;
-}
-
-.row {
-  margin: 0 !important;
 }
 
 p {
@@ -34,6 +32,14 @@ button {
   &:hover {
     cursor: pointer;
     background-color: white;
+  }
+}
+
+header {
+  nav a, nav a:hover, nav a:visited, nav a:active {
+    color: #444;
+    outline: none;
+    text-decoration: none;
   }
 }
 

@@ -1,13 +1,50 @@
+doctype html
 html(lang="pt-br")
-    meta(name="viewport"
-        content="width=device-width, initial-scale=1")
-    meta(charset="utf-8")
-    title OrthoDesign :: odontologia contemporânea
-    link(href="scss/bootstrap.min.css", rel="stylesheet")
-    link(rel="stylesheet" href="scss/main.css")
-    script(src="js/jquery-3.3.1.min.js")
+    meta(property="og:site_name", content="OrthoDesign")/
+    meta(property="og:title" content="Odontologia Contemporânea")/
+    meta(property="og:description" content="Tratamentos Odontológicos em Eusébio/CE. Venha conhecer nosso espaço e nossos tratamentos.")/
+    meta(property="og:image" itemprop="image" content="http://www.orthodesign.com.br/res/ortho_300.png")/
+    meta(property="og:image:type" content="image/jpeg")/
+    meta(property="og:image:width" content="300")/
+    meta(property="og:image:height" content="316")/
+    meta(property="og:url" content="http://www.orthodesign.com.br/")/
+    meta(property="og:type" content="website")/
+    meta(property="og:updated_time" content="1543550402")/
+    meta(name="viewport" content="width=device-width, initial-scale=1")/
+    meta(charset="utf-8")/
+    meta(name="description" content="Tratamentos Odontológicos em Eusébio/CE. Venha conhecer nosso espaço e nossos tratamentos.")/
+    meta(name="keywords" content="orthodesign, ortho, odontologia, eusebio, ceara, protese, dentaria, protese dentaria, cirurgia")/
+    meta(name="robots" content="index, follow")/
+    link(rel="apple-touch-icon" sizes="180x180" href="res/icones/apple-touch-icon.png")
+    link(rel="icon" type="image/png" sizes="32x32" href="res/icones/favicon-32x32.png")
+    link(rel="icon" type="image/png" sizes="16x16" href="res/icones/favicon-16x16.png")
+    link(rel="mask-icon" href="res/icones/safari-pinned-tab.svg" color="#5bbad5")
+    script(type="application/ld+json").
+        {
+            "@context" : "http://schema.org",
+            "@type" : "LocalBusiness",
+            "name" : "OrthoDesign - Odontologia Contemporânea",
+            "image" : "http://www.orthodesign.com.br/res/ortho_300.png",
+            "telephone" : "+55 (85) 98195-0931",
+            "email" : "orthodesigneusebio@gmail.com",
+            "address" : {
+                "@type" : "PostalAddress",
+                "streetAddress" : "R. Santa Adélia",
+                "addressLocality" : "Eusébio",
+                "addressRegion" : "Ceará",
+                "addressCountry" : "Brasil",
+                "postalCode" : "61760-000"
+            },
+            "url" : "http://www.orthodesign.com.br/"
+        }
+
+    title OrthoDesign - Odontologia Contemporânea
 
     body
+        link(href="scss/bootstrap.min.css", rel="stylesheet")
+        link(rel="stylesheet" href="scss/main.css")
+        script(src="js/jquery-3.3.1.min.js")
+
         header
             button.trigger-menu(onclick="$('menu').toggleClass('show')")
             div.cabecalho
@@ -21,39 +58,38 @@ html(lang="pt-br")
                     img(src="res/ortho.svg")
                     menu
                         div
-                            nav(section="header") <i class="ic ic-home"></i> Home
-                            nav(section="servicos") <i class="ic ic-servicos"></i> Serviços
-                            nav(section="sobre") <i class="ic ic-sobre"></i> Sobre nós
-                            nav(section="equipe") <i class="ic ic-equipe"></i> Equipe
-                            nav(section="footer") <i class="ic ic-fale-conosco"></i> Fale Conosco
+                            nav(data-section="header") <i class="ic ic-home"></i> <a href="#">Home</a>
+                            nav(data-section="servicos") <i class="ic ic-servicos"></i> <a href="#">Serviços</a>
+                            nav(data-section="sobre") <i class="ic ic-sobre"></i> <a href="#">Sobre nós</a>
+                            nav(data-section="equipe") <i class="ic ic-equipe"></i> <a href="#">Equipe</a>
+                            nav(data-section="footer") <i class="ic ic-fale-conosco"></i> <a href="#">Fale Conosco </a>
             div.text
                 p OrthoDesign
                 p Odontologia Contemporânea
 
-            div.arrow.kick
-        main
-            section.servicos
+        main.container-fluid
+            section.show.servicos
                 div
                     h3 Serviços
                     span Conheça nossos serviços personalizados para você
                 div.row
-                    div.col.col-md-5
+                    div.col.col-12.col-md-5
                         h5 Prótese Dentária
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col.col-md-5
+                    div.col.col-12.col-md-5
                         h5 Cirurgia
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col.col-md-5
+                    div.col.col-12.col-md-5
                         h5 Ortodontia
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-                    div.col.col-md-5
+                    div.col.col-12.col-md-5
                         h5 Odontopediatria
                         p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
-            section.sobre
+            section.show.sobre
                 div.row
                     div.col-md-8
                         h3 Sobre nós
@@ -68,29 +104,29 @@ html(lang="pt-br")
                         figure
                             img(src="res/sobre_img.png")
 
-            section.equipe
+            section.show.equipe
                 h3 Nossa Equipe
                 span Conheça nossa equipe
                 div.row
-                    div.col.col-md-5.doutor
+                    div.col.col-lg-5.col-md-12.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.col-md-5.doutor
+                    div.col.col-lg-5.col-md-12.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.col-md-5.doutor
+                    div.col.col-lg-5.col-md-12.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
                             label John Dow
                             p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
-                    div.col.col-md-5.doutor
+                    div.col.col-lg-5.col-md-12.doutor
                         figure
                             img(src="res/doctor.png")
                         figcaption
@@ -100,49 +136,47 @@ html(lang="pt-br")
         footer
             div.row
                 div.col-lg-3.col-md-12
-                    label Nosso Endereço
+                    h5 Nosso Endereço
                     div
                         img(src="res/icones/ic_location.svg")
-                        span R .Santa Adélia, 179 - lojas 4 e 5 <br/>Centro, Eusébio
+                        span R. Santa Adélia, 179 - lojas 4 e 5 <br/>Centro, Eusébio
 
                 div.col-lg-3.col-md-12
-                    label Contato
+                    h5 Contato
                     div
                         img(src="res/icones/ic_email.svg")
-                        span <a href="mailto:atendimento@orthodesign.com.br">atendimento@orthodesign.com.br</a>
+                        span <a href="mailto:orthodesigneusebio@gmail.com">orthodesigneusebio@gmail.com</a>
                     div
                         img(src="res/icones/ic_wpp.svg")
                         span (85) 98195-0931
                     div
                         img(src="res/icones/ic_instagram.svg")
                         span
-                            a(href="instagram.com/orthodesign") @orthodesign
+                            a(href="http://www.instagram.com/othodesignodontologia") @othodesignodontologia
                     div
                         img(src="res/icones/ic_facebook.svg")
                         span
-                            a(href="facebook.com/orthodesign") /orthodesign
+                            a(href="http://www.facebook.com/orthodesignodontologia") /orthodesignodontologia
 
 
-                div.col-lg-6.col-md-12.fale-conosco
-                    label Fale Conosco
+                div.col-lg-6.col-md-12.horario-funcionamento
+                    h5 Horário de Funcionamento
                     div.row
-                        div.info.col-md-6
-                            div
-                                label Nome
-                                input(type="text" placeholder="Informe seu nome...")
-                            div
-                                label Telefone
-                                input(type="text" placeholder="(XX) XXXXX-XXXX")
-                            div
-                                label E-mail
-                                input(type="text" placeholder="seu@email.com")
-                        div.message.col-md-6
-                            label Mensagem
-                            textarea(placeholder="Informe sua duvida aqui...")
-                            button Enviar
+                        div.col-md-7.col-6
+                            label Segunda - Sexta
+                        div.col-md-5.col-6
+                            span 08:00 - 18:00
+                        div.col-md-7.col-6
+                            label Sábado
+                        div.col-md-5.col-6
+                            span 08:00 - 12:00
+                        div.col-md-7.col-6
+                            label Domingos e Feriados
+                        div.col-md-5.col-6
+                            span Fechado
 
 
-            div.row.footer-sticker
+            div.footer-sticker
                 div.col
                     label &copy; 2017 <b>Ortho Design.</b> Todos os direitos reservados.
 

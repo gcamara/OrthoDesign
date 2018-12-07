@@ -1,14 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Text+Me+One");
 body {
   font-family: sans-serif, Arial;
   color: #444;
 }
 
-.row {
-  margin: 0 !important;
-}
-
 p {
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: justify;
 }
 
@@ -20,16 +17,22 @@ button {
   border-radius: 10px;
   background-color: transparent;
   color: #EB4C4C;
-  -webkit-transition: background-color .3s;
-  -moz-transition: background-color .3s;
-  -ms-transition: background-color .3s;
-  -o-transition: background-color .3s;
-  transition: background-color .3s;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
   outline: none;
 }
 button:hover {
   cursor: pointer;
   background-color: white;
+}
+
+header nav a, header nav a:hover, header nav a:visited, header nav a:active {
+  color: #444;
+  outline: none;
+  text-decoration: none;
 }
 
 @keyframes kick-arrow {
@@ -42,10 +45,11 @@ div.info-contato {
   width: 100%;
   background: rgba(246, 246, 246, 0.5);
   min-height: 30px;
+  display: none;
 }
 
 header {
-  height: 970px;
+  height: 50%;
   background-image: url("../res/header.png");
   background-repeat: no-repeat;
   -webkit-background-size: contain;
@@ -84,7 +88,7 @@ header .text p:not(:first-child) {
   letter-spacing: 10;
   animation: show-text- 1s ease-in forwards;
   animation-delay: 1s;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
 }
 @keyframes show-text- {
   to {
@@ -109,10 +113,10 @@ header .arrow {
   opacity: 0;
 }
 header .arrow.kick {
-  animation: kick-arrow .8s alternate infinite;
+  animation: kick-arrow 0.8s alternate infinite;
 }
 header div.cabecalho {
-  transition: background .3s ease-in;
+  transition: background 0.3s ease-in;
   display: flex;
   flex-direction: column;
 }
@@ -145,20 +149,20 @@ header menu div nav::before {
   bottom: 0;
   left: 0;
   display: inline-block;
-  content: '';
-  transition: width .3s ease-in-out;
+  content: "";
+  transition: width 0.3s ease-in-out;
 }
 header menu div nav:hover {
   cursor: pointer;
 }
 header menu div nav:hover::before {
-  content: '';
+  content: "";
   width: 100%;
   height: 3px;
   background: white;
 }
 
-section.servicos, section.equipe {
+section.equipe, section.servicos {
   width: 90%;
   margin: auto;
   text-align: center;
@@ -166,19 +170,18 @@ section.servicos, section.equipe {
 
 section {
   margin-top: -30px !important;
-  opacity: 0;
   min-height: 300px;
-  transition: margin-top .7s ease-in, opacity .5s ease-in;
+  transition: margin-top 0.7s ease-in, opacity 0.5s ease-in;
 }
 section figure {
   overflow: hidden;
 }
 section.show {
-  opacity: 1;
   margin-top: 0 !important;
 }
 section h3 {
   margin-bottom: 0;
+  font-family: "Text Me One";
 }
 section.servicos div.col {
   border-top: 5px solid #d6a193;
@@ -186,15 +189,12 @@ section.servicos div.col {
   min-height: 150px;
   padding-top: 10px;
 }
-section.servicos div {
-  margin: 10px 25px;
-}
 section.sobre figure {
   position: relative;
   margin-bottom: 0;
 }
 section.sobre figure::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -207,7 +207,7 @@ section.sobre h3 {
   margin-bottom: 20px;
 }
 section.sobre p {
-  font-size: .8em;
+  font-size: 0.8em;
   text-align: justify;
 }
 section.sobre div.col-md-4 {
@@ -226,13 +226,35 @@ section.equipe {
 
 footer {
   margin-top: 150px;
-  min-height: 400px;
+  min-height: 280px;
   background-color: #EB4C4C;
   color: white;
   position: relative;
+  font-family: "Text Me One", sans-serif;
+  padding: 40px;
+  font-size: 0.9em;
+}
+footer > .row > div[class^=col-]:not(:first-child) {
+  margin-top: 30px;
 }
 footer .col-md-3 div {
   margin-bottom: 10px;
+}
+footer img {
+  width: 0.9em;
+  height: 0.9em;
+}
+footer h5 {
+  position: relative;
+}
+footer h5::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #f6f6f6;
+  bottom: -5px;
+  left: 0;
 }
 footer img {
   margin-right: 5px;
@@ -247,8 +269,9 @@ footer .footer-sticker {
   background-color: #fd6b6b;
   width: 100%;
   text-align: center;
-  line-height: 40px;
-  margin-left: -40px !important;
+  line-height: 20px;
+  padding-top: 10px;
+  left: 0;
 }
 footer .footer-sticker label {
   font-size: 12pt !important;
@@ -264,7 +287,7 @@ footer input, footer textarea {
   margin-bottom: 10px;
 }
 footer .fale-conosco label {
-  margin-bottom: .1rem;
+  margin-bottom: 0.1rem;
 }
 footer .fale-conosco .col-md-6 {
   padding-left: 0;
@@ -293,107 +316,15 @@ footer .fale-conosco .info .col-md-6 {
   }
 
   header {
-    height: 440px;
     background-size: 100% 100%;
-  }
-  header button.trigger-menu {
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.5);
-    display: block;
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    margin: 5px;
-  }
-  header p, header .arrow {
-    display: none !important;
-  }
-  header div.cabecalho {
-    transition: background .3s ease-in;
-    height: 100%;
-    margin: auto;
-  }
-  header div.cabecalho.fix {
-    position: relative;
-  }
-  header div.cabecalho img {
-    width: 250px;
-    height: 250px;
-    margin: auto;
-  }
-  header div.cabecalho .menu {
-    display: flex;
-  }
-  header menu {
-    transition: left .5s ease-in;
-    position: fixed;
-    overflow: hidden;
-    left: -150px;
-    top: -20px;
-    height: calc(100vh + 20px);
-    padding: 0px;
-    z-index: 9999;
-    box-shadow: 6px 0 20px -10px black;
-  }
-  header menu.show {
-    left: 0;
-  }
-  header menu div nav {
-    display: block;
-    text-align: center;
-    margin: 0;
-    padding: 5px;
-    height: 20%;
-    color: white;
-    text-align: center;
-    font-size: 8pt;
-    overflow: hidden;
-  }
-  header menu div nav[section="header"] {
-    background-color: #D6A193;
-  }
-  header menu div nav[section="servicos"] {
-    background-color: #E9A897;
-  }
-  header menu div nav[section="sobre"] {
-    background-color: #F2AF9D;
-  }
-  header menu div nav[section="equipe"] {
-    background-color: #FFB9A6;
-  }
-  header menu div nav[section="footer"] {
-    background-color: #FEA68F;
-  }
-  header .ic {
-    width: 40px;
-    height: 40px;
-    display: block;
-    margin: 12px auto 2px auto;
-  }
-  header .ic.ic-home {
-    background: url("../res/icones/ic_home.svg") no-repeat center;
-  }
-  header .ic.ic-servicos {
-    background: url("../res/icones/ic_dente.svg") no-repeat center;
-  }
-  header .ic.ic-sobre {
-    background: url("../res/icones/ic_sobre.svg") no-repeat center;
-  }
-  header .ic.ic-equipe {
-    background: url("../res/icones/ic_equipe.svg") no-repeat center;
-  }
-  header .ic.ic-fale-conosco {
-    background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
+    height: 80%;
   }
 
   section.sobre div.col-md-4 img {
     width: 260%;
+  }
+  section.servicos div {
+    margin: 10px 25px;
   }
   section.equipe div {
     margin: 10px 25px;
@@ -410,22 +341,16 @@ footer .fale-conosco .info .col-md-6 {
     width: 15px;
     height: 15px;
   }
-  footer [class^="col"] > label {
+  footer [class^=col] > label {
     font-size: 12pt;
-  }
-  footer .row div[class^="col-"]:not(:first-child) {
-    margin-top: 30px;
   }
   footer .fale-conosco {
     margin-bottom: 35px;
   }
-  footer .footer-sticker {
-    width: calc(100% + 10px);
-  }
 }
 @media screen and (min-width: 1024px) {
   section.show {
-    margin-top: 100px !important;
+    margin-top: 50px !important;
   }
   section.servicos {
     opacity: 1 !important;
@@ -434,15 +359,155 @@ footer .fale-conosco .info .col-md-6 {
     width: 170%;
   }
 
-  footer .row div[class^="col-"]:not(:first-child) {
+  footer .row div[class^=col-]:not(:first-child) {
     margin-top: 0;
   }
+  footer .horario-funcionamento {
+    margin-bottom: 20px;
+  }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 320px) and (max-width: 1026px) {
   header {
-    height: 870px;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background-size: 100% 100%;
+  }
+  header nav a, header nav a:hover, header nav a:visited, header nav a:active {
+    color: white;
+  }
+  header .text {
+    display: none;
+  }
+  header button.trigger-menu {
+    border: none;
+    outline: none;
+    background-color: rgba(130, 51, 163, 0.5);
+    display: block;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 0;
+    margin: 5px;
+    background-image: url("../res/icones/menu_hamb.png");
+    background-repeat: no-repeat;
+    background-size: 60%;
+    background-position: 50%;
+    filter: brightness(1);
+  }
+  header button.trigger-menu .dash {
+    width: 80%;
+    height: 2px;
+    background: white;
+    margin: auto;
+    margin-top: 2px;
+  }
+  header button.trigger-menu .dash:not(:first-child) {
+    margin: 10px auto;
+  }
+  header .ic {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 20% auto 2px auto;
+  }
+  header .ic.ic-home {
+    background: url("../res/icones/ic_home.svg") no-repeat center;
+  }
+  header .ic.ic-servicos {
+    background: url("../res/icones/ic_dente.svg") no-repeat center;
+  }
+  header .ic.ic-sobre {
+    background: url("../res/icones/ic_sobre.svg") no-repeat center;
+  }
+  header .ic.ic-equipe {
+    background: url("../res/icones/ic_equipe.svg") no-repeat center;
+  }
+  header .ic.ic-fale-conosco {
+    background: url("../res/icones/ic_fale_conosco.svg") no-repeat center;
+  }
+  header p, header .arrow {
+    display: none !important;
+  }
+  header div.cabecalho {
+    transition: background 0.3s ease-in;
+    height: 100%;
+    margin: auto;
+  }
+  header div.cabecalho.fix {
+    position: relative;
+  }
+  header div.cabecalho img {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+  header div.cabecalho .menu {
+    display: flex;
+  }
+  header menu {
+    transition: left 0.5s ease-in;
+    position: fixed;
+    overflow: hidden;
+    left: -150px;
+    top: -20px;
+    height: calc(100vh + 20px);
+    padding: 0px;
+    z-index: 9999;
+    box-shadow: 6px 0 20px -10px black;
+    background: #FEA68F;
+  }
+  header menu.show {
+    left: 0;
+  }
+  header menu div nav {
+    display: block;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    color: white;
+    text-align: center;
+    font-size: 8pt;
+    overflow: hidden;
+  }
+  header menu div nav div {
+    color: white;
+    margin: auto;
+  }
+  header menu div nav[section=header] {
+    background-color: #D6A193;
+  }
+  header menu div nav[section=servicos] {
+    background-color: #E9A897;
+  }
+  header menu div nav[section=sobre] {
+    background-color: #F2AF9D;
+  }
+  header menu div nav[section=equipe] {
+    background-color: #FFB9A6;
+  }
+  header menu div nav[section=footer] {
+    background-color: #FEA68F;
+  }
+
+  section.servicos div {
+    margin-top: 10px;
+  }
+  section.sobre h3 {
+    text-align: center;
+  }
+  section.show {
+    margin-top: 30px !important;
+  }
+
+  footer .horario-funcionamento {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1025px) {
+  header {
+    height: 970px;
   }
   header p, header .cabecalho img, header .arrow {
     display: initial !important;
@@ -455,7 +520,6 @@ footer .fale-conosco .info .col-md-6 {
     top: 0;
     width: 100%;
     background: #f6f6f6;
-    height: 117px;
     z-index: 999;
     box-shadow: 0 -5px 15px #444444;
   }
@@ -506,19 +570,10 @@ footer .fale-conosco .info .col-md-6 {
     margin: 0;
   }
   section.sobre div.col-md-4 img {
-    width: 100%;
+    width: 130%;
   }
-
-  footer {
-    padding: 40px;
-    font-size: 1.1em;
-  }
-  footer [class^="col"] > label {
-    font-size: 17pt;
-  }
-  footer img {
-    width: 22px;
-    height: 22px;
+  section.servicos div {
+    margin: 10px 25px;
   }
 }
 
